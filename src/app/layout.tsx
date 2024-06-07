@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import { Alata, Playfair_Display, Roboto } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
-const PlayfairDisplay = Playfair_Display({ subsets: ["latin"] });
+const PlayfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
+});
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: "100"
+  weight: "100",
+  variable: "--font-roboto",
 });
 const alata = Alata({
   subsets: ["latin"],
   weight: "400",
+  variable: "--font-alata",
 });
 
 export const metadata: Metadata = {
@@ -24,8 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${PlayfairDisplay.className} ${alata.style.fontFamily} 
-      ${roboto.style.fontFamily}`}>{children}</body>
+      <body
+        className={`${PlayfairDisplay.variable} ${roboto.variable} ${alata.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

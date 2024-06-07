@@ -1,11 +1,11 @@
-import About from "./components/about";
-import BookDetails from "./components/bookdetails";
+import AboutBook from "./components/aboutBook";
+import BookDetails from "./components/bookDetails";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Necklace from "./components/necklace";
 import Quote from "./components/quote";
-import VideoBanner from "./components/videobanner";
+import VideoBanner from "./components/videoBanner";
 
 export default function Home() {
   return (
@@ -13,12 +13,12 @@ export default function Home() {
       <Header />
       <main className="w-full mx-auto">
         <Hero />
-        <About />
+        <AboutBook />
         <VideoBanner />
         <Quote />
         <Necklace />
         <BookDetails />
-        <Footer />
+        <Footer secondVariant={false}/>
       </main>
     </>
   );

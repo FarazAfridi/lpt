@@ -6,12 +6,16 @@ button {
   font-family: inherit;
 }
 
+.playfair-display {
+  font-family: var(--font-playfair-display);
+}
+
 .roboto {
-  font-family: '__Roboto_68d44c', '__Roboto_cd16c7';
+  font-family: var(--font-roboto);
 }
 
 .alata {
-  font-family: '__Alata_1504e9';
+  font-family: var(--font-alata);
 }
 
 .btn-gradient {

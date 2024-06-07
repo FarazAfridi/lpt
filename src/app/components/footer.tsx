@@ -1,14 +1,24 @@
 import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({ secondVariant }: { secondVariant: boolean }) {
   return (
-    <div className="bg-[#F4F4F4] flex items-center h-[50px] w-full px-[40px] mt-[50px] lg:flex-col lg:h-[120px] lg:gap-y-5 lg:bg-white lg:px-0">
-      <div className="flex items-center h-full gap-6 w-full lg:h-[50px] max-w-[500px] lg:max-w-[unset] lg:justify-between lg:bg-[#F4F4F4] lg:px-[40px]">
+    <div
+      className={`${
+        secondVariant ? "bg-[#171717] bg-opacity-40" : "bg-[#F4F4F4]"
+      } flex items-center h-[50px] w-full px-[40px] mt-[50px] lg:flex-col lg:h-[120px] lg:gap-y-5 lg:bg-white lg:px-0 ${secondVariant && 'lg:bg-transparent'}`}
+    >
+      <div className={`flex items-center h-full gap-6 w-full lg:h-[50px] max-w-[500px] lg:max-w-[unset] lg:justify-between lg:bg-[#F4F4F4] lg:px-[40px] ${secondVariant && 'lg:bg-[#171717] lg:bg-opacity-40'}`}>
         <div className="flex gap-x-6 sm:gap-x-0 items-center">
-        <span className="sm:text-[14px]">LOVE, POWER, AND TREASURE</span>
-        <span className="text-[#4CA1E4] alata sm:text-[14px] font-semibold">
-          COMING<br></br> SOON
-        </span>
+          <span
+            className={`sm:text-[14px] playfair-display ${
+              secondVariant && "text-[#CDCDCD]"
+            }`}
+          >
+            LOVE, POWER, AND TREASURE
+          </span>
+          <span className="text-[#4CA1E4] alata sm:text-[14px] font-semibold sm:ml-4">
+            COMING<br></br> SOON
+          </span>
         </div>
         {/* <div className="flex mt-auto w-[50px] mr-4 ml-8 text-blue-400 font-bold">
         </div> */}
@@ -30,49 +40,104 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className="flex justify-between w-full lg:h-[50px] lg:bg-[#F4F4F4] lg:px-[40px] items-center">
-        <p className="alata text-[#535353] sm:text-[14px]">About the Author</p>
+      <div className={`flex justify-between w-full lg:h-[50px] lg:bg-[#F4F4F4] lg:px-[40px] items-center ${secondVariant && 'lg:bg-[#171717] lg:bg-opacity-40'}`}>
+        <p
+          className={`alata text-[#535353] sm:text-[14px] ${
+            secondVariant && "text-[#CDCDCD]"
+          }`}
+        >
+          About the Author
+        </p>
         <div className="flex items-center gap-7">
-        <div className="flex items-center gap-2">
-          <Image
-            className="w-[21px] h-[17px] sm:w-[16px] sm:h-[11px]"
-            src={"/subscribe.png"}
-            width={64}
-            height={64}
-            alt=""
-          />
-          <p className="text-[#535353] alata sm:text-[14px]">Subscribe</p>
-        </div>
-        <div className="flex gap-7">
-          <Image
-            className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
-            src={"/youtube.png"}
-            width={64}
-            height={64}
-            alt=""
-          />
-          <Image
-            className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
-            src={"/tiktok.png"}
-            width={64}
-            height={64}
-            alt=""
-          />
-          <Image
-            className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
-            src={"/twitter.png"}
-            width={64}
-            height={64}
-            alt=""
-          />
-          <Image
-            className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
-            src={"/instagram.png"}
-            width={64}
-            height={64}
-            alt=""
-          />
-        </div>
+          <div className="flex items-center gap-2">
+            {secondVariant ? (
+              <Image
+                className="w-[21px] h-[17px] sm:w-[16px] sm:h-[11px]"
+                src={"/subscribe2.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            ) : (
+              <Image
+                className="w-[21px] h-[17px] sm:w-[16px] sm:h-[11px]"
+                src={"/subscribe.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            )}
+
+            <p
+              className={`text-[#535353] alata sm:text-[14px] ${
+                secondVariant && "text-[#CDCDCD]"
+              }`}
+            >
+              Subscribe
+            </p>
+          </div>
+          <div className="flex gap-7">
+
+              <Image
+                className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
+                src={"/youtube.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            
+            {secondVariant ? (
+              <Image
+                className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
+                src={"/tiktok2.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            ) : (
+              <Image
+                className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
+                src={"/tiktok.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            )}
+            {secondVariant ? (
+              <Image
+                className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
+                src={"/twitter2.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            ) : (
+              <Image
+                className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
+                src={"/twitter.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            )}
+            {secondVariant ? (
+              <Image
+                className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
+                src={"/instagram2.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            ) : (
+              <Image
+                className="w-[20px] h-[20px] sm:w-[16px] sm:h-[16px]"
+                src={"/instagram.png"}
+                width={64}
+                height={64}
+                alt=""
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>

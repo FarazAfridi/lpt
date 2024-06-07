@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function About() {
+export default function AboutBook() {
   return (
     <div className="flex justify-center mx-auto mt-[50px] flex-wrap max-w-[1600px] md:mx-[40px]">
       <div className="relative w-[500px] h-[580px] md:w-[300px] md:h-[300px]">
@@ -36,13 +36,13 @@ export default function About() {
         </p>
         <div className="flex justify-between mt-14 flex-wrap w-full max-w-[300px]">
           <div className="flex flex-col">
-            <span className="font-bold text-[#202021]">Author</span>{" "}
-            <span className="roboto font-semibold text-[#202021]">
+            <span className="font-bold text-[#202021] playfair-display">Author</span>{" "}
+            <span className="roboto font-semibold text-[#202021] ">
               Nahid Azami
             </span>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-[#202021]">Illustrated by</span>{" "}
+            <span className="font-bold text-[#202021] playfair-display">Illustrated by</span>{" "}
             <span className="roboto font-semibold text-[#202021]">
               Antonio Javier Caparo
             </span>

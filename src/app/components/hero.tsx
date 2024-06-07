@@ -11,7 +11,7 @@ export default function Hero() {
         height={960}
       />
       <div className="flex flex-col ml-[100px] mb-[150px] z-10 w-full max-w-[400px] items-center gap-5 mx-[40px] md:ml-auto md:mb-[350px] md:w-[270px]">
-        <p className="text-white text-opacity-70 text-3xl text-center md:text-xl md:text-opacity-100">
+        <p className="text-white text-opacity-70 text-3xl text-center md:text-xl md:text-opacity-100 playfair-display">
           Azami&apos;s
         </p>
         <Image
@@ -21,7 +21,7 @@ export default function Hero() {
           width={250}
           height={250}
         />
-        <p className="text-white text-opacity-70 text-3xl text-center md:text-xl md:text-opacity-100 w-[270px]">
+        <p className="text-white text-opacity-70 text-3xl text-center md:text-xl md:text-opacity-100 w-[270px] playfair-display">
           In every moment there is a secret world waiting for you.
         </p>
         <button className="bg-white bg-opacity-40 w-[200px] h-[50px] rounded-md z-10 md:hidden text-[#FFD15A] border-[#A47701] border-[1px] alata backdrop-blur-sm">
