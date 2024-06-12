@@ -19,7 +19,7 @@ button {
 }
 
 .btn-gradient {
-  background: rgb(164, 119, 1);
+  /* background: rgb(164, 119, 1);
   background: linear-gradient(
     90deg,
     rgba(164, 119, 1, 1) 0%,
@@ -27,5 +27,71 @@ button {
     rgba(255, 184, 0, 1) 50%,
     rgba(164, 119, 1, 1) 75%,
     rgba(122, 88, 0, 1) 100%
+  ); */
+
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  color: #FFD15A;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.btn-gradient::after {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 105%;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    rgba(164, 119, 1, 1) 0%,
+    rgba(218, 158, 0, 1) 25%,
+    rgba(255, 184, 0, 1) 50%,
+    rgba(164, 119, 1, 1) 75%,
+    rgba(122, 88, 0, 1) 100%
   );
+  /* background: red; */
+  z-index: -1;
+  opacity: 0.4;
+}
+
+
+.girl {
+  animation: scale 5s ease infinite both alternate;
+}
+
+@keyframes scale {
+  0% {
+    translate: 0 0px;
+    scale: 0.8;
+  }
+
+  50% {
+    translate: 0 20px;
+  }
+
+  100% {
+    translate: 25px -50px;
+    scale: 1.05;
+  }
+}
+
+@keyframes mobile {
+  0% {
+    translate: 0 0px;
+  }
+
+  100% {
+    translate: 0 -50px;
+  }
+}
+
+@media screen and (max-width:1023px) {
+  .girl {
+    animation: mobile 2s ease infinite both alternate;
+  }
 }
