@@ -61,7 +61,7 @@ button {
 
 
 .girl {
-  animation: scale 5s ease infinite both alternate;
+  animation: scale 5s ease both alternate;
 }
 
 @keyframes scale {
@@ -92,6 +92,6 @@ button {
 
 @media screen and (max-width:1023px) {
   .girl {
-    animation: mobile 2s ease infinite both alternate;
+    animation: mobile 2s ease both alternate;
   }
 }

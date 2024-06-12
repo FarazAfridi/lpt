@@ -15,7 +15,7 @@ export default function AboutBook() {
         <h3 className="alata font-bold text-4xl mb-5">
           Love, Power, and Treasure
         </h3>
-        <p className="text-xl roboto font-semibold text-[#202021]">
+        <p className="text-base roboto font-semibold text-[#202021]">
           Ana&apos;s world is forever changed when an owl gives her a golden
           heart, granting her the extraordinary ability to understand her best
           friend Maloos the Cow speak out loud for the very first time. As Ana
@@ -36,14 +36,14 @@ export default function AboutBook() {
         </p>
         <div className="flex justify-between mt-14 flex-wrap w-full max-w-[300px]">
           <div className="flex flex-col">
-            <span className="font-bold text-[#202021] playfair-display">Author</span>{" "}
-            <span className="roboto font-semibold text-[#202021] ">
+            <span className="font-bold text-[#202021] playfair-display text-base">Author</span>{" "}
+            <span className="roboto font-semibold text-[#202021] text-base">
               Nahid Azami
             </span>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-[#202021] playfair-display">Illustrated by</span>{" "}
-            <span className="roboto font-semibold text-[#202021]">
+            <span className="font-bold text-[#202021] playfair-display text-base">Illustrated by</span>{" "}
+            <span className="roboto font-semibold text-[#202021] text-base">
               Antonio Javier Caparo
             </span>
           </div>

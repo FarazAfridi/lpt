@@ -14,7 +14,7 @@ export default function Home() {
       <main className="w-full mx-auto">
         <Hero />
         <AboutBook />
-        <VideoBanner />
+        {/* <VideoBanner /> */}
         <Quote />
         <Necklace />
         <BookDetails />
